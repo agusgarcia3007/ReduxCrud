@@ -1,14 +1,17 @@
 import { ADD_ITEM, ADDING_OK, ADDING_ERROR } from '../types';
+import axios from 'axios';
 
 //create new items
 export function createItem(item){
-    return (dispatch) => {
+    return async (dispatch) => {
         dispatch( addItem() );
 
         try {
+            await axios.post('http://localhost:4000/items', item);
             dispatch( addingOk(item) )
         } catch (error) {
-            dispatch( addingError(true) )
+            console.log(error)
+            dispatch( addingError(true) );
         }
     }
 }

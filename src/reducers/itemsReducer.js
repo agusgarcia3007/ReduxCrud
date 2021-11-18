@@ -18,7 +18,6 @@ const itemsReducer = function(state = initialState, action){
             return{
                 ...state,
                 loading: false,
-             
                 items: [...state.items, action.payload]
             }
         case ADDING_ERROR:
