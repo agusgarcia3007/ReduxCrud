@@ -5,9 +5,14 @@ import NewItem from './components/NewItem';
 import UpdateItem from './UpdateItem';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
+//redux
+import { Provider } from 'react-redux';
+import store from './store';
+
 const App = () => {
   return (
       <Router>
+        <Provider store={store}>
          <Header />
 
          <div className="container mt-5">
@@ -17,6 +22,7 @@ const App = () => {
              <Route path='/items/update/:id' element={<UpdateItem/>} />
            </Routes>
          </div>
+         </Provider>
       </Router>
     );
 }

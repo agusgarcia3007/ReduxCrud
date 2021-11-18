@@ -1,0 +1,29 @@
+{
+    "items": [
+      {
+        "id": 1,
+        "name": "Flat White",
+        "price": "230"
+      },
+      {
+        "id": 2,
+        "name": "Magic",
+        "price": "230"
+      },
+      {
+        "name": "Doppio",
+        "price": "200",
+        "id": 3
+      },
+      {
+        "name": "Latte",
+        "price": "200",
+        "id": 4
+      },
+      {
+        "name": "Long Black",
+        "price": "200",
+        "id": 5
+      }
+    ]
+  }
