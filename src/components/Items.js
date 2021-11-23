@@ -40,14 +40,7 @@ const Items = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    { items.length === 0 ? 'No items available' : (
-                        items.map(item => (
-                            <Item 
-                                key={item.id}
-                                item={item}
-                            />         
-                    ))
-                    )}
+                    {items.length === 0 ? 'No items available' : ( items.map(item => (<Item key={item.id} item={item}/>)))}
                 </tbody>
             </table>
         </>

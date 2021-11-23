@@ -37,7 +37,9 @@ const UpdateItem = () => {
         e.preventDefault();
 
         dispatch(updateItemAction(item));
-        navigate('/')
+        
+        navigate('/');
+        window.location.reload();
     }
     
 
