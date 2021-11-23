@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 //redux actions
 import {createItem} from '../actions/itemActions';
@@ -17,8 +18,15 @@ const NewItem = () => {
     //useDispatch
     const dispatch = useDispatch();
 
+    //alerts
+    const loading = useSelector( state => state.items.loading );
+    const error = useSelector( state => state.items.error);
+
     //use action
-    const addItem = item => dispatch( createItem(item) )
+    const addItem = item => dispatch( createItem(item) );
+
+    //history from router
+    let navigate = useNavigate();
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -32,7 +40,12 @@ const NewItem = () => {
             name,
             price
         });
+
+        //redirect
+        navigate('/');
 }
+
+
 
     return ( 
         <div className="row justify-content-center">
@@ -67,6 +80,8 @@ const NewItem = () => {
 
                             <button type="submit" className='btn btn-dark font-weight-bold text-uppercase d-block w-100 mt-3' > Add </button>
                         </form>
+                        { loading ? <p className='loading mt-3'>Loading...</p> : null }
+                        { error ? <p className='alert alert-danger p2 mt-3 text-center'>An error occured. Please try again later</p> : null }
                     </div>
                 </div>
             </div>

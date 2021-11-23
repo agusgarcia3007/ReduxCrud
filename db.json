@@ -1,33 +1,18 @@
 {
   "items": [
     {
-      "id": 1,
-      "name": "Flat White",
-      "price": "230"
+      "name": "piccolo latte",
+      "price": 180,
+      "id": 2
     },
     {
-      "id": 2,
-      "name": "Magic",
-      "price": "230"
-    },
-    {
-      "name": "Doppio",
-      "price": "200",
-      "id": 3
-    },
-    {
-      "name": "Latte",
-      "price": "200",
-      "id": 4
-    },
-    {
-      "name": "Long Black",
-      "price": "200",
+      "name": "doppio",
+      "price": "240",
       "id": 5
     },
     {
-      "name": "espresso",
-      "price": 200,
+      "name": "flat",
+      "price": 230,
       "id": 6
     }
   ]
