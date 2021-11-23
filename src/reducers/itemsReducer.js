@@ -27,6 +27,7 @@ const itemsReducer = function(state = initialState, action){
         case REMOVE_ERROR:
         case GETTING_ERROR:
         case ADDING_ERROR:
+        case UPDATE_ERROR:
             return{
                 ...state,
                 loading: false,

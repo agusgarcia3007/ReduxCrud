@@ -26,7 +26,7 @@ const Items = () => {
 
     return ( 
         <>
-            <h2 className="text-center my-5 recrud">Items</h2>
+            <h2 className="text-center my-5 recrud items">Items</h2>
 
             {error ? <p className="font-weight-bold alert alert-danger text-center mt-4">An error occurred</p> : null}
             {loading ? <p className='text-center loading'>Loading...</p> : null}
@@ -42,12 +42,10 @@ const Items = () => {
                 <tbody>
                     { items.length === 0 ? 'No items available' : (
                         items.map(item => (
-                            
                             <Item 
                                 key={item.id}
                                 item={item}
-                            />
-                            
+                            />         
                     ))
                     )}
                 </tbody>

@@ -1,19 +1,24 @@
 {
   "items": [
     {
-      "name": "piccolo latte",
-      "price": 180,
-      "id": 2
-    },
-    {
       "name": "doppio",
-      "price": "240",
+      "price": "200",
       "id": 5
     },
     {
       "name": "flat",
       "price": 230,
       "id": 6
+    },
+    {
+      "name": "latte",
+      "price": 200,
+      "id": 7
+    },
+    {
+      "name": "magic",
+      "price": 230,
+      "id": 8
     }
   ]
 }

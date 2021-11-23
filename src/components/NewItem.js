@@ -6,6 +6,7 @@ import {createItem} from '../actions/itemActions';
 
 //function to use action
 import { useDispatch, useSelector } from 'react-redux';
+import Swal from 'sweetalert2';
 
 
 
@@ -33,6 +34,11 @@ const NewItem = () => {
 
         //validation
         if(name.trim() === '' || price <= 0){
+            Swal.fire(
+                'Oops',
+                'Both fields are required',
+                'warning'
+            )
             return;
         }
 

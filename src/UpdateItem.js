@@ -19,7 +19,7 @@ const UpdateItem = () => {
 
     useEffect(()=>{
         setItem(itemUpdate);
-    },[setItem]);
+    },[setItem, itemUpdate]);
 
 
     const formChange = e => {

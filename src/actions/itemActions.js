@@ -1,5 +1,5 @@
 import { ADD_ITEM, ADDING_OK, ADDING_ERROR, GETTING_ITEMS, GETTING_OK, GETTING_ERROR, REMOVE_ITEM, REMOVE_OK, REMOVE_ERROR, UPDATE_ITEM, 
-    START_UPDATE ,UPDATE_ERROR, UPDATE_OK } from '../types';
+    START_UPDATE, UPDATE_OK } from '../types';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
@@ -121,9 +121,21 @@ export function updateItemAction(item){
         dispatch( updateItem(item) )
         try {
             await axios.put(`http://localhost:4000/items/${item.id}`, item);
-            dispatch( updateItemOk(item))
+            dispatch( updateItemOk(item));
+
+            //sweetalert
+            Swal.fire(
+                'You did it!',
+                'Your item was succesfully updated',
+                'success'
+            );
+
         } catch (error) {
-         console.log(error)   
+            Swal.fire(
+                'Ooops',
+                "We are having some trouble. Please try again later",
+                'error'
+            )
         }
     }
 
